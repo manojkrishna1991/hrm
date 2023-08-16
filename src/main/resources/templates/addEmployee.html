@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+	.error {
+		color: red;
+	}
+</style>
+<form action="#" th:action="@{/create/employee}" th:object=="${employeeData}" method="post">
+	<table border="1">
+		<tr>
+			<td><input type="text" th:field="*{firstName}" placeholder="firstName" /></td>
+			<td th:if="${#fields.hasErrors('firstName')}" th:errorclass="error" th:errors="*{firstName}">firstName Error
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{lastName}" placeholder="lastName" /></td>
+			<td th:if="${#fields.hasErrors('lastName')}" th:errorclass="error" th:errors="*{lastName}">lastName Error
+			</td>
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{middleName}" placeholder="middleName" /></td>
+			<td th:if="${#fields.hasErrors('middleName')}" th:errorclass="error" th:errors="*{middleName}">middleName
+				Error
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{username}" placeholder="username" /></td>
+			<td th:if="${#fields.hasErrors('username')}" th:errorclass="error" th:errors="*{username}">username Error
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{email}" placeholder="email" /></td>
+			<td th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}">username Error
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{mobile}" placeholder="mobile" /></td>
+			<td th:if="${#fields.hasErrors('mobile')}" th:errorclass="error" th:errors="*{mobile}">mobile Error
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{bloodGroup}" placeholder="BloodGroup" /></td>
+			<td th:if="${#fields.hasErrors('bloodGroup')}" th:errorclass="error" th:errors="*{bloodGroup}">bloodGroup
+				Error
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{code}" placeholder="code" /></td>
+			<td th:if="${#fields.hasErrors('code')}" th:errorclass="error" th:errors="*{code}">bloodGroup Error
+
+		</tr>
+		<tr>
+			<td><input type="text" th:field="*{organizationId}" placeholder="organizationId" /></td>
+			<td th:if="${#fields.hasErrors('organizationId')}" th:errorclass="error" th:errors="*{organizationId}">
+				organizationId Error
+
+		</tr>
+		<tr>
+			<td><input type="submit" value="Submit" /></td>
+		</tr>
+	</table>
+</form>
+
+</html>
